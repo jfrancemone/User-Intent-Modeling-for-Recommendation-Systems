@@ -1,9 +1,9 @@
 # Intent Prediction & Algorithmic Alignment
 ### Reducing User Friction through Multi-Modal Intent Analysis
 
-**Techniques:** Unsupervised NLP (LDA), Causal Inference (Propensity Score Matching), Gradient Boosting
-**Tools:** Python, Pandas, Gensim, Scikit-Learn, PyCausalInference
+**Techniques:** Supervised  Gradient Boosting, Unsupervised NLP (LDA), Causal Inference (Propensity Score Matching)
 
+**Tools:** Python, Pandas, Gensim, Scikit-Learn, PyCausalInference
 ---
 
 ## Executive Summary
