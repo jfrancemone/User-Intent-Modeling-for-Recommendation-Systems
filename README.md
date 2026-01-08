@@ -1,31 +1,23 @@
-# Intent Prediction & Algorithmic Alignment
-## 📊 Project Overview
+# 🤖 Intent Prediction & Algorithmic Alignment
+[![Topic](https://img.shields.io/badge/Topic-NLP_%26_Machine_Learning-blue)]()
+[![Method](https://img.shields.io/badge/Method-XGBoost_%7C_Causal_Inference-green)]()
+[![Status](https://img.shields.io/badge/Status-Project_Complete-orange)]()
+
+### **Project Overview**
 [**View the Project Slides (PDF)**](./Francemone_Intent_Prediction_and_Algorithmic_Alignment.pdf)
-### Reducing User Friction through Multi-Modal Intent Analysis
 
-**Techniques:** Supervised  Gradient Boosting, Unsupervised NLP (LDA), Causal Inference (Propensity Score Matching)
+This project moves beyond standard demographic filtering to build a **Multi-Modal Intent Framework**. A critical friction point in online dating is mismatched intent (e.g., "Wants Kids" vs. "Child-free"), which leads to low-quality dates and churn.
 
-**Tools:** Python, Pandas, SpaCy, Scikit-Learn, SHAP, Gensim (see requirements.txt for full list)
+Using a dataset of ~60,000 profiles, I developed a three-tiered analytical framework combining **Supervised Learning** (Gradient Boosting), **Unsupervised NLP** (LDA), and **Causal Inference** (Propensity Score Matching) to isolate the true drivers of family planning intent.
 
 ---
 
-## Executive Summary
+### **Key Findings & Strategic Insights**
 
-### The Challenge: Reducing Algorithmic Friction
-A critical friction point in online dating is mismatched intent. Matching users with conflicting relationship goals, specifically around family planning (e.g., "Wants Kids" vs. "Child-free"), leads to low-quality dates, user churn, and fatigue.
+#### **1. Demographics Provide a Strong Baseline (80% Accuracy)**
+**Age**, **Sexuality**, and **Religion** are the primary gatekeepers of family intent. However, demographic models struggle to differentiate between **"Lifestyle Choice"** (child-free by choice) and **"Life Stage"** (not ready yet).
 
-### The Approach
-This project moves beyond standard demographic filtering to build a **Multi-Modal Intent Framework**. Using a dataset of ~60,000 profiles, I developed a three-tiered analytical framework:
-1.  **Predictive Modeling (Gradient Boosting Classifiers):** Estimating baseline predictability of family planning using structured demographic and lifestyle data.
-2.  **Unsupervised NLP (LDA):** Extracting latent psychographic personas from open-ended user essays for user segmentation.
-3.  **Causal Inference (Propensity Score Matching):** Isolating the **causal impact** of these personas on family planning, independent of other key demographic drivers.
-
-## Key Findings & Strategic Insights
-
-### 1. Demographics Provide a Strong Baseline (80% Accuracy)
-**Age**, **Sexuality**, and **Religion** are the primary gatekeepers of family intent. However, demographic models struggle to differentiate between **"Lifestyle Choice"** (e.g., child-free by choice) and **"Life Stage"** (e.g., not ready yet). Identifying this nuance required analyzing the unstructured text data.
-
-### 2. Language is a Behavior: 5 Distinct Personas
+#### **2. Language is a Behavior: 5 Distinct Personas**
 By analyzing user essays, I identified five robust psychographic clusters that cut across demographics:
 * **The Artist:** Creative, non-traditional.
 * **The Techie:** Niche interests, analytical.
@@ -33,42 +25,30 @@ By analyzing user essays, I identified five robust psychographic clusters that c
 * **The Professional:** Career-focused, stable.
 * **The Romantic:** Intimacy-focused, emotional.
 
-### 3. Causal Drivers vs. Proxy Signals
-Using **Propensity Score Matching (PSM)** and **Sensitivity Analysis**, I separated causal drivers from correlations:
-
-* **The Socialite Effect (+18.46% Lift):** Validated as a robust causal driver (Gamma = 2.3). Even after controlling for demographics, users who signal social behaviors are fundamentally more driven toward family building.
-    * *Recommendation:* Elevate social keywords (dinner, bar, events) as high-confidence proxies for family planning.
-* **The Techie Divergence (-19.76% Lift):** Validated as a robust deterrent (Gamma = 2.1). This persona represents a distinct, competing life goal focused on technological and media-related interests.
-    * *Recommendation:* Implement hard segmentation. Do not nudge these users toward family tracks; optimize for shared-interest matching instead.
-* **The Romantic Null (-1.79% Lift):** Seeking love does not mean seeking family. Users using highly romantic language show zero causal increase in desire for children (p = 0.22).
-    * *Recommendation:* Decouple algorithmic weighting of "Romance" and "Family" wording to prevent expectation mismatch.
-
-### Conclusion
-This analysis confirms that **psychographic personas are not just descriptive, they are predictive drivers of user intent.** Integrating NLP-derived signals can significantly reduce false-positive matches, moving the platform from simple interest-based relationships to deep intent-based relationships.
+#### **3. Causal Drivers vs. Proxy Signals**
+Using **Propensity Score Matching (PSM)**, I separated causal drivers from simple correlations:
+* **The Socialite Effect (+18.46% Lift):** Validated as a robust causal driver. Users who signal social behaviors are fundamentally more driven toward family building.
+    * *Recommendation:* Elevate social keywords (dinner, bar, events) as high-confidence proxies.
+* **The Techie Divergence (-19.76% Lift):** Validated as a robust deterrent. This persona represents a distinct, competing life goal.
+    * *Recommendation:* Implement hard segmentation; do not nudge these users toward family tracks.
+* **The Romantic Null (-1.79% Lift):** Seeking love does not mean seeking family. Users using highly romantic language show zero causal increase in desire for children.
 
 ---
 
-## Project Structure
+### **Repository Structure**
+This repository separates data, model artifacts, and analysis logic.
 
-This repository is organized to separate data, model artifacts, and analysis logic.
-
-* `notebooks/`: Contains the main analysis notebook (`Intent_Prediction_and_Algorithmic_Alignment.ipynb`).
-* `models/`: (Not tracked in repo) Stores the trained LDA model (`.gensim`) and dictionary artifacts.
-* `data/`: (Not tracked in repo) Stores raw profile data and processed pickle files.
-
-## Reproducability
-
-### Prerequisites
-To reproduce this analysis, you will need the packages listed in `requirements.txt`.
-
-### Installation
-1.  Clone the repository:
-    ```bash
-    git clone [https://github.com/jfrancemone/Intent-Prediction-and-Algorithmic-Alignment.git](https://github.com/jfrancemone/Intent-Prediction-and-Algorithmic-Alignment.git)
-    ```
-2.  Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-3.  Run the notebook:
-    Navigate to the `notebooks/` directory and launch Jupyter Lab or Jupyter Notebook.
+```text
+/Intent-Prediction-Analysis
+│
+├── /notebooks
+│   └── Intent_Prediction_Analysis.ipynb  <-- Main analysis notebook
+│
+├── /models
+│   └── (Excluded from repo due to size)  <-- LDA model artifacts (.gensim)
+│
+├── /data
+│   └── (Excluded from repo for privacy)  <-- Raw profile data
+│
+├── requirements.txt                      <-- Dependencies for reproduction
+└── Francemone_Intent_Prediction.pdf      <-- Summary Slide Deck****
