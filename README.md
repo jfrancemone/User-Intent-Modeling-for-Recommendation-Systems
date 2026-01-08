@@ -56,7 +56,7 @@ This repository is organized to separate data, model artifacts, and analysis log
 * `models/`: (Not tracked in repo) Stores the trained LDA model (`.gensim`) and dictionary artifacts.
 * `data/`: (Not tracked in repo) Stores raw profile data and processed pickle files.
 
-## Getting Started
+## Reproducability
 
 ### Prerequisites
 To reproduce this analysis, you will need the packages listed in `requirements.txt`.
