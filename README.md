@@ -39,13 +39,19 @@ Using **Propensity Score Matching (PSM)**, I separated causal drivers from simpl
 This repository separates data, model artifacts, and analysis logic.
 
 ```text
-/Intent-Prediction-Analysis
+/Intent-Prediction-and-Algorithmic-Alignment
 │
 ├── /notebooks
-│   └── Intent_Prediction_Analysis.ipynb  <-- Main analysis notebook
+│   └── Intent_Prediction_and_Algorithmic_Alignment.ipynb  <-- Main analysis notebook
+|   └── Intent_Prediction_and_Algorithmic_Alignment.html
+|   └── lda_viz.png
 │
 ├── /models
-│   └── (Excluded from repo due to size)  <-- LDA model artifacts (.gensim)
+│   └── dictionary_frozen.gensim  <-- LDA model artifacts
+|   └── lda_model_frozen.gensim
+|   └── lda_model_frozen.gensim.expElogbeta.npy
+|   └── lda_model_frozen.gensim.id2word
+|   └── lda_model_frozen.gensim.state
 │
 ├── /data
 │   └── (Excluded from repo for privacy)  <-- Raw profile data
