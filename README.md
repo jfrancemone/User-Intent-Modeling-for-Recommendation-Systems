@@ -33,6 +33,7 @@ Using **Propensity Score Matching (PSM)**, I separated causal drivers from corre
 * **The Techie Divergence (-19.76% Lift):** Validated as a robust deterrent. This persona represents a distinct, competing life goal.
     * *Recommendation:* Implement hard segmentation; do not nudge these users toward family tracks.
 * **The Romantic Null (-1.79% Lift):** Seeking love does not mean seeking family. Users using highly romantic language show zero causal increase in desire for children.
+    * *Recommendation:* Decouple romance from parenthood; separate intimacy signals from family building signals.
 
 ---
 
