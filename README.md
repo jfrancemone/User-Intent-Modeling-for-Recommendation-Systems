@@ -91,3 +91,11 @@ To reproduce this analysis, you will need the packages listed in `requirements.t
     ```
 3.  **Run the Analysis:**
     Navigate to `notebooks/` and launch the Jupyter Notebook.
+
+---
+
+### **My Role**
+**Lead Data Scientist & Researcher**
+* Built and tuned the XGBoost predictive model for intent classification.
+* Engineered the end-to-end NLP pipeline (LDA Topic Modeling) to extract user personas.
+* Applied Propensity Score Matching (PSM) to isolate causal drivers of family planning intent.
