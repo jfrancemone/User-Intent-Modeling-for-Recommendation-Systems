@@ -19,6 +19,7 @@ Using a dataset of ~60,000 profiles, I developed a three stage analytical framew
 
 #### **2. Language is a Behavior: 5 Distinct Personas**
 <img src="notebooks/lda_viz.png" alt="Topic Modeling Visualization" width="75%">
+
 By analyzing user essays, I identified five robust psychographic clusters that cut across demographics:
 * **The Artist:** Creative, non-traditional.
 * **The Techie:** Niche interests, analytical.
