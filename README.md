@@ -18,7 +18,7 @@ Using a dataset of ~60,000 profiles, I developed a three stage analytical framew
 * **Age**, **Sexuality**, and **Religion** are the primary gatekeepers of family planning. However, demographic models struggle to differentiate between **Lifestyle Choice** (child-free by choice) and **Life Stage** (not ready yet).
 
 #### **2. Language is a Behavior: 5 Distinct Personas**
-<img src="notebooks/lda_viz.png" alt="Topic Modeling Visualization" width="90%">
+<img src="notebooks/lda_viz.png" alt="Topic Modeling Visualization" width="85%">
 
 By analyzing user essays, I identified five robust psychographic clusters that cut across demographics:
 * **The Artist:** Creative, non-traditional.
