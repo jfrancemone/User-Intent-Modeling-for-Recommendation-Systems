@@ -8,7 +8,9 @@
 
 This project moves beyond standard demographic filtering to build a **Multi-Modal Intent Framework** in online dating. A critical friction point in online dating is mismatched intent (e.g., Wants Kids vs. Child-free), which leads to low-quality dates and churn.
 
-Using a dataset of ~60,000 profiles, I developed a three stage analytical framework combining **Supervised Learning** (Gradient Boosting), **Unsupervised NLP** (LDA), and **Causal Inference** (Propensity Score Matching) to isolate drivers of family planning intent.
+Using a dataset of ~60,000 profiles, I developed a three stage analytical framework combining Supervised Learning (Gradient Boosting), Unsupervised NLP (LDA), and Causal Inference (Propensity Score Matching) to isolate drivers of family planning intent.
+
+*Note: This analysis uses a publicly available dataset (OkCupid, 2012) to demonstrate the methodological pipeline. The framework generalizes to any intent prediction problem with demographic + text features.*
 
 ---
 
